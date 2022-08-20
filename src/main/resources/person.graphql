@@ -1,0 +1,22 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Query {
+    getAllPerson : [Person]
+    findPerson(name: String): Person
+}
+
+type Mutation {
+    addPerson(personInput: PersonInput!): Person
+}
+
+input PersonInput {
+    name: String!
+}
+
+type Person {
+    id: String
+    name: String
+}
